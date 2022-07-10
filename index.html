@@ -7,27 +7,44 @@
     <title>New Eportfolio</title>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/1695277bde.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("d4_eGziFVhGB_BmRW");
+        })();
+     </script>
+
+
+
   </head>
   <body>
     <nav>
         <nav class="nav__container">
             <figure class="nav__logo">
-            <a href="#">
+            <a href="">
               <img src="/assets/9AXEFa01.svg" alt="" class="logo" />
             </a>
           </figure>
           <ul class="nav__links">
             <li class="nav__link">
-              <a class="nav__link--anchor" href="#">HOME</a>
+              <a class="nav__link--anchor" href="">HOME</a>
             </li>
             <li class="nav__link">
-              <a class="nav__link--anchor" href="#">LANGUAGES</a>
+              <a class="nav__link--anchor" href="#" onclick="toggleModal()">LANGUAGES</a>
             </li>
             <li class="nav__link">
               <a class="nav__link--anchor" href="#">PROJECTS</a>
             </li>
             <li class="nav__link">
-              <a class="nav__link--anchor" href="#">CONTACT</a>
+              <a class="nav__link--anchor" href="#" onclick="toggleModal()">CONTACT</a>
             </li>
           </ul>
         </nav>
@@ -43,8 +60,89 @@
             <a href="#projects" class="scroll">
                 <div class="scroll__icon click"></div>
               </a>
+             
         </div>
+        <a href="#landing-page"><button class="mail__btn click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+          </button></a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+              <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+              <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer</h4>
+              <p class="modal__para">
+                I'm a <b>Frontend Developer</b> with a strong passion for creating websites.
+                
+                I currently work on engineering extremely <b>versatile</b> and <b>responsive</b> web pages which prioritize <b>function, user experience</b> and <b>optimization</b> above all. Finding <b>solutions to problems</b> of varying difficulty is everyday routine for me.
+              </p>
+              <div class="modal__languages">
+                <figure class="modal__language">
+                  <img class="modal__language--img" src="./assets/HTML5_Badge_64.png" alt="">
+                  <pre class="language__name">HTML</pre>
+                </figure>
+                <figure class="modal__language">
+                  <img class="modal__language--img" src="./assets/CSS3_logo.svg.png" alt="">
+                  <pre class="language__name">CSS</pre>
+                </figure>
+                <figure class="modal__language">
+                  <img class="modal__language--img" src="./assets/600px-JavaScript-logo.png" alt="">
+                  <pre class="language__name">JavaScript</pre>
+                </figure>
+                <figure class="modal__language">
+                  <img class="modal__language--img" src="./assets/react js, react, logo, js icon icon.png" alt="">
+                  <pre class="language__name">React</pre>
+                </figure>
+              </div>
+            </div>
+            <div class="modal__half modal__contact">
+              <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+              <h3 class="modal__title modal__title--contact">
+                Let's have a chat!
+              </h3>
+              <h4 class="modal__sub-title modal__sub-title--contact">
+                I'm currently open to new opportunities.
+              </h4>
+              <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                  <label class="form__item--label">Name</label>
+                  <input class="input" name="user_name" type="text" required></inout>
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">Email</label>
+                  <input class="input" name="user_email" type="email" required></input>
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">Message</label>
+                  <textarea class="input" name="message" type="text" required></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">
+                  Send it my way!
+                </button>
+              </form>
+           <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+           </div>
+           <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon!
+           </div>
+            </div>
+            
+          </div>
         <div class="social__links">
+            <div class="social__link">
+                <a class="social__link--logo" href="https://github.com/DennisEgh" target="_blank">
+                    <i class="fa-brands fa-github click"></i>
+                </a>
+            </div>
+            <div class="social__link">
+                <a class="social__link--logo" href="">
+                    <i class="fa-solid fa-file-pdf click"></i>
+                </a>
+            </div>
+            <div class="social__link">
+                <a class="social__link--logo" href="">
+                    <i class="fa-brands fa-linkedin click"></i>
+                </a>
+            </div>
 
         </div>
     </section>
