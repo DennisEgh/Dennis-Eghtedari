@@ -16,10 +16,10 @@
 nav {
   width: 100%;
   height: 85px;
-  background-color: #242424;
   position: fixed;
-  width: 100%;
-    z-index: 1000;
+  
+ z-index: 1;
+    background-color: #242424;
 }
 h1{
     color: white;
@@ -61,9 +61,6 @@ p{
 }
 .nav__link--anchor:hover {
   color: #F2AA4CFF
-}
-.menu__btn{
-    display: none;
 }
 #landing-page {
   height: 100vh;
@@ -432,6 +429,77 @@ textarea {
     display: none;
 }
 
+/* Hamburger menu */
+.menu__btn{
+    display: none;
+}
+
+.menu__logo{
+    filter: grayscale(1);
+    filter: invert(1);
+}
+
+.menu{
+    height: 50vh;
+    width: 75%;
+    position: relative;
+    top: 100%;
+    float: right;
+    background-color: hsl(0 0% 0% / 0.75);
+    backdrop-filter: blur(0.5rem);
+    text-align:right;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 400ms ease;
+    transform: translateX(100%);
+    border-radius: 10px;
+    
+
+   
+}
+.menu__active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.menu__links{
+position: relative;
+top: 20%;
+
+}
+.menu__link{
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #242424;
+    border-top: 1px solid #242424;
+    
+}
+
+
+
+
+/* ---PROJECTS--- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 480px){
@@ -441,6 +509,7 @@ textarea {
     .menu__btn{
         display: block;
         font-size: 30px;
+        color: white;
     }
     .nav__container{
         padding: 20px 20px 20px 20px;
@@ -490,7 +559,14 @@ textarea {
     .modal__language{
         padding: 15px;
     }
-    .menu__btn{
-        color: white;
+    .hamburger{
+        display: block;
     }
+    .hamburger_inactive{
+        display: none;
+    }
+    .times{
+        display: none;
+    }
+
 }
