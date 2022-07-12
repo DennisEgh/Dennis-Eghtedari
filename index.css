@@ -78,7 +78,7 @@ p{
 .landing-page__main--content {
   text-align: center;
   position: relative;
-  top: 10%;
+  top: 25%;
 }
 .landing-page__title {
   font-size: 64px;
@@ -459,7 +459,7 @@ textarea {
     }
     .landing-page__main--content{
         position: relative;
-        top: 0%;
+        top: 25%;
     }
     .landing-page__title{
         font-size: 40px;
