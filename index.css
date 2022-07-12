@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", "Roboto", sans-serif;
   list-style-type: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   scroll-behavior: smooth;
   text-decoration: none;
 }
@@ -15,15 +16,22 @@
 nav {
   width: 100%;
   height: 85px;
+  background-color: #242424;
 }
 h1{
-    color: #242424;
+    color: white;
 }
 a{
-    color: #242424;
+    color: white;
 }
 button{
     color: #242424;
+}
+.pink{
+    color: #F2AA4CFF
+}
+p{
+    color: white;
 }
 
 
@@ -34,8 +42,7 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
-  position: fixed;
+  
 }
 .nav__links {
   display: flex;
@@ -50,13 +57,14 @@ button{
   transition: all 300ms ease;
 }
 .nav__link--anchor:hover {
-  color: rgb(75, 193, 233);
+  color: #F2AA4CFF
 }
 .menu__btn{
     display: none;
 }
-.landing-page {
-  height: calc(100vh - 85px);
+#landing-page {
+  height: 100vh;
+  background-color: #242424;
 }
 .landing-page__main-content--container {
   display: flex;
@@ -66,18 +74,26 @@ button{
 }
 .landing-page__main--content {
   text-align: center;
+  position: relative;
+  top: 10%;
 }
 .landing-page__title {
   font-size: 64px;
 }
 .landing-page__para {
   font-size: 20px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .landing-page__btn {
   margin-top: 5rem;
   border: none;
   padding: 16px 70px;
-  background-color: rgb(75, 193, 233);
+  background-color: #F2AA4CFF;
+  color: #242424;
   border-radius: 4px;
   font-size: 20px;
   font-weight: bold;
@@ -98,7 +114,7 @@ button{
 .scroll__icon{
     width: 20px;
     height: 30px;
-    border: 2px solid #242424;
+    border: 2px solid white;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -109,7 +125,7 @@ button{
 
 .scroll__icon:after{
     content: "";
-    background-color: #242424;
+    background-color: white;
     width: 4px;
     height: 6px;
     border-radius: 2px;
@@ -131,8 +147,8 @@ button{
     font-size: 32px;
     border-radius: 50%;
     border: none;
-    background-color: #242424;
-    color: #fff;
+    background-color: #F2AA4CFF;
+    color: #242424;
     position: absolute;
     bottom: 32px;
     z-index: 100;
@@ -157,7 +173,7 @@ button{
 
 
 /* MODAL */
-.modal--open nav,
+.modal--open .nav__container,
 .modal--open .landing-page__main-content--container
 {
     opacity: 0;
@@ -185,11 +201,6 @@ nav, .scroll, .landing-page__main-content--container{
     visibility: hidden;
     z-index: -1;
     transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
-    
-    
-   
-
-
 }
 
 .modal__half{
@@ -204,8 +215,9 @@ nav, .scroll, .landing-page__main-content--container{
 }
 
 .modal__about{
-    background-color: #fff;
+    background-color:white;
     transform: translateX(-110%);
+    
    
 }
 
@@ -218,7 +230,7 @@ nav, .scroll, .landing-page__main-content--container{
 
 .modal__contact{
     background-color: #242424;
-    color: #fff;
+    color: white;
     transform: translateX(110%);
 }
 
@@ -272,7 +284,7 @@ transform: scale(1);
 
 .modal__sub-title{
     margin: 12px 0 24px 0;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 
@@ -280,6 +292,10 @@ transform: scale(1);
     margin-bottom: 12px;
     line-height: 1.75;
     font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #242424;
+    
 }
 
 
@@ -288,9 +304,9 @@ transform: scale(1);
 }
 
 .form__submit{
-    background-color: #fff;
-    border: 2px solid #fff;
-    color: black;
+    background-color: #F2AA4CFF;
+    border: 2px solid #F2AA4CFF;
+    color: #242424;
     font-weight: bold;
     max-width: 240px;
     font-weight: 700;
@@ -301,14 +317,14 @@ transform: scale(1);
 }
 
 .form__submit:hover{
-    border-color: #fff;
+    border-color: #F2AA4CFF;
     background-color: transparent;
     color: #fff;
 }
 
 .form__submit:active{
-    border-color: #fff;
-    color: black;
+    border-color: #F2AA4CFF;
+    color: #F2AA4CFF;
 }
 
 .modal__overlay{
@@ -333,7 +349,7 @@ font-size: 80px;
 
 
 .modal__overlay--success{
-    background-color: green;
+    background-color: #F2AA4CFF;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
@@ -390,20 +406,32 @@ textarea {
 
 .social__links {
     display: flex;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     gap: 30px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #fff;
+    background: #F2AA4CFF;
     box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
     padding: 0.5rem;
 }
 .social__link--logo{
    font-size: 30px;
+   color: #242424;
+}
+
+.social__links-mobile{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    display: none;
 }
 
 
-@media (max-width: 428px){
+
+@media (max-width: 480px){
     .nav__links{
         display: none;
     }
@@ -422,13 +450,44 @@ textarea {
     .social__links{
         display: none;
     }
+    .social__links-mobile{
+        display: block;
+        display: flex;
+    }
+    .landing-page__main--content{
+        position: relative;
+        top: 0%;
+    }
     .landing-page__title{
         font-size: 40px;
     }
+    .landing-page__para {
+        font-size: 18px;
+        margin-top: 20px;
+        max-width: 80%;
+      }
     .scroll{
         display: none;
     }
     .landing-page{
         height: calc(100vh - 85px);
+    }
+    .modal {
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+      }
+    .modal__half {
+        width: 100%;
+      }
+    .modal__language{
+        padding: 15px;
+    }
+    .menu__btn{
+        color: white;
     }
 }
