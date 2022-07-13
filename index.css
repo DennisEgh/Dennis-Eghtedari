@@ -604,6 +604,9 @@ textarea {
 
 
 @media (max-width: 480px) {
+  #landing-page{
+    height: 70vh;
+  }
   .nav__links {
     display: none;
   }
