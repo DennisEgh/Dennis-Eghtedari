@@ -439,7 +439,7 @@ textarea {
   position: relative;
   top: 100%;
   float: right;
-  background-color: hsl(0 0% 0% / 0.75);
+  background-color: hsl(0 0% 0% / 1);
   backdrop-filter: blur(0.5rem);
   text-align: right;
   visibility: hidden;
