@@ -182,7 +182,8 @@ p {
 
 /* MODAL */
 .modal--open .nav__container,
-.modal--open .landing-page__main-content--container {
+.modal--open .landing-page__main-content--container,
+.modal--open .social__links {
   opacity: 0;
   visibility: hidden;
   transition: all 500ms;
@@ -190,10 +191,11 @@ p {
 
 nav,
 .scroll,
-.landing-page__main-content--container {
+.landing-page__main-content--container,
+.social__links {
   opacity: 1;
   visibility: visible;
-  transition: all 600ms 600ms;
+  transition: all 600ms 600ms ease;
 }
 
 .modal {
@@ -710,6 +712,7 @@ margin-bottom: 20px;
     transform: none;
     height: auto;
     width: 100%;
+    z-index: -1;
     flex-direction: column-reverse;
     border-radius: 0;
   }
