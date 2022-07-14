@@ -198,17 +198,10 @@ nav,
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
   max-width: 1100px;
-  height: 600px;
-  border-radius: 10px;
   overflow: hidden;
   display: flex;
-  visibility: hidden;
-  z-index: -1;
+
   transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
@@ -620,13 +613,18 @@ textarea {
 }
 .footer__introduction{
   width: 100%;
-  max-width: 500px;
 }
 .footer__title{
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
+}
+.footer__title--social{
+  font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 20px;
 }
 .footer__social{
   width: 100%;
@@ -662,7 +660,9 @@ textarea {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+
+
+@media (min-width: 300px) {
   .nav__links {
     display: none;
   }
@@ -743,13 +743,13 @@ textarea {
   .footer__introduction{
     text-align: center;
     margin-bottom: 40px;
-    width: 100%;
+    max-width: none;
 
   }
   .footer__title--para{
     width: 100%;
     max-width: 300px;
-    margin: 0 auto;
+    margin: auto;
   }
   .footer__social{
     margin: 0 auto;
@@ -760,4 +760,73 @@ textarea {
   .footer__social--links{
     max-width: 225px;
   }
+  .footer__title--social{
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 768px){
+.nav__links >:nth-child(1){
+  display: flex;
+}
+.nav__links >:nth-child(2){
+  display: flex;
+}
+.social__links{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.social__links-mobile{
+  display: none;
+}
+.menu__btn{
+  display: none;
+}
+.nav__links{
+  display: flex;
+}
+.modal__language{
+  padding: 45px;
+}
+}
+
+@media (min-width: 769px){
+  .project__list--mobile{
+    display: none;
+  }
+  .project__list{
+    display: block;
+  }
+  .footer__upper{
+    display: flex;
+  }
+  .footer__introduction{
+    max-width: 500px;
+  }
+  .footer__title{
+    text-align: left;
+    margin-left: 40px;
+  }
+  .footer__title--para{
+    text-align: left;
+    margin-left: 40px;
+  }
+  .footer__title--social{
+    text-align: left ;
+  }
+  .modal__language{
+    padding: 25px;
+  }
+  .modal{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 90%;
+    flex-direction: unset;
+    border-radius: 10px;
+  }
+
 }
