@@ -506,6 +506,7 @@ textarea {
   width: 100%;
   height: 500px;
   transition: all 450ms ease;
+  object-fit: cover;
 }
 .project__wrapper {
   position: relative;
@@ -524,6 +525,7 @@ textarea {
 }
 .project__wrapper:hover .project__wrapper--bg {
   opacity: 0.8;
+  background-color: #1c1d25;
 }
 
 .project__description {
@@ -537,12 +539,12 @@ textarea {
   max-width: 550px;
 }
 .project__wrapper--bg {
+  transition: all 300ms ease;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1c1d25;
   opacity: 0.7;
 }
 .project__description--title {
