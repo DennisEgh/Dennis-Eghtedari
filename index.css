@@ -655,7 +655,7 @@ margin-bottom: 20px;
 }
 .footer__social--links{
   width: 100%;
-  max-width: 125px;
+  max-width: 70px;
   display: flex;
   justify-content: space-between;
 }
@@ -760,9 +760,7 @@ margin-bottom: 20px;
   .footer__title{
     text-align: center;
   }
-  .footer__social--links{
-    max-width: 225px;
-  }
+ 
   .footer__title--social{
     text-align: center;
   }
@@ -791,6 +789,15 @@ margin-bottom: 20px;
   display: flex;
 }
 
+
+}
+
+@media (max-width: 769px){
+  .footer__social--links{
+  justify-content: center;
+  max-width: 200px;
+  gap: 30px;
+  }
 }
 
 @media (min-width: 769px){
