@@ -723,19 +723,7 @@ margin-bottom: 20px;
   .landing-page {
     height: calc(100vh - 85px);
   }
-  .modal {
-    top: 0;
-    left: 0;
-    transform: none;
-    height: auto;
-    width: 100%;
-    z-index: -1;
-    flex-direction: column-reverse;
-    border-radius: 0;
-  }
-  .modal__half {
-    width: 100%;
-  }
+
   
   .hamburger {
     display: block;
@@ -842,3 +830,18 @@ margin-bottom: 20px;
 
 
 
+@media(max-width: 885px){
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+  .modal__half {
+    width: 100%;
+  }
+}
