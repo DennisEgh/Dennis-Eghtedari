@@ -846,3 +846,33 @@ margin-bottom: 20px;
     width: 100%;
   }
 }
+
+@media(max-width: 700px){
+.project__description{
+  left: 20px;
+  
+}
+
+}
+
+@media(max-width: 485px){
+  .modal__languages{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media(max-width: 603px){
+  .project__description{
+    width: 100%;
+  max-width: 325px;
+  }
+  .project__description--title{
+    font-size: 25px;
+  }
+  .project__description--sub-title{
+    font-size: 14px;
+  }
+  .project__description--para{
+    font-size: 13px;
+  }
+}
